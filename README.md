@@ -1,7 +1,5 @@
 # 📚 Sistema de Biblioteca Universitária – Modelagem UML
 
-> Trabalho de modelagem UML da disciplina **[NOME DA DISCIPLINA]** – Universidade Federal de Goiás (UFG) – [SEMESTRE/ANO]
-
 **Tema escolhido:** Tema 2 – Sistema de Biblioteca Universitária
 
 ---
@@ -40,7 +38,7 @@ Usuário consulta livro → verifica disponibilidade → realiza empréstimo →
 
 **Principais classes:** `Usuario`, `Aluno`, `Professor`, `Bibliotecario`, `Livro`, `Exemplar`, `Emprestimo`, `Reserva`, `Multa`.
 
-A descrição completa (mínimo de 1 página) está em [`docs/descricao-da-aplicacao.md`](docs/descricao-da-aplicacao.md).
+A descrição completa (mínimo de 1 página) está em [`biblioteca-uml/docs/descricao-da-aplicacao.md`](biblioteca-uml/docs/descricao-da-aplicacao.md).
 
 ---
 
@@ -50,20 +48,20 @@ Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
 
 | # | Artefato | Descrição | Código-fonte |
 |---|----------|-----------|--------------|
-| 1 | **Diagrama de Atividades** | Fluxo principal do empréstimo à devolução, com decisões, fluxos alternativos (livro indisponível, multa) e raias por ator | [`atividades.puml`](diagramas/atividades/atividades.puml) |
-| 2 | **Diagrama de Sequência** | Interação entre atores e sistema no cenário **“Realizar Empréstimo”** | [`sequencia.puml`](diagramas/sequencia/sequencia.puml) |
-| 3 | **Diagrama de Classes (macro)** | Classes principais, atributos, métodos, visibilidade, herança e multiplicidades | [`classes.puml`](diagramas/classes/classes.puml) |
+| 1 | **Diagrama de Atividades** | Fluxo principal do empréstimo à devolução, com decisões, fluxos alternativos (livro indisponível, multa) e raias por ator | [`atividades.puml`](biblioteca-uml/diagramas/atividades/atividades.puml) |
+| 2 | **Diagrama de Sequência** | Interação entre atores e sistema no cenário **"Realizar Empréstimo"** | [`sequencia.puml`](biblioteca-uml/diagramas/sequencia/sequencia.puml) |
+| 3 | **Diagrama de Classes (macro)** | Classes principais, atributos, métodos, visibilidade, herança e multiplicidades | [`classes.puml`](biblioteca-uml/diagramas/classes/classes.puml) |
 
 <!-- Descomente cada imagem depois de gerar o PNG correspondente.
 
 ### Diagrama de Atividades
-![Diagrama de Atividades](diagramas/atividades/atividades.png)
+![Diagrama de Atividades](biblioteca-uml/diagramas/atividades/atividades.png)
 
 ### Diagrama de Sequência
-![Diagrama de Sequência](diagramas/sequencia/sequencia.png)
+![Diagrama de Sequência](biblioteca-uml/diagramas/sequencia/sequencia.png)
 
 ### Diagrama de Classes
-![Diagrama de Classes](diagramas/classes/classes.png)
+![Diagrama de Classes](biblioteca-uml/diagramas/classes/classes.png)
 -->
 
 ---
@@ -73,21 +71,21 @@ Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
 ```
 .
 ├── README.md
-├── .gitignore
-├── docs/
-│   ├── descricao-da-aplicacao.md
-│   ├── consideracoes-finais.md
-│   └── (capa e PDF final entregue no Turing)
-└── diagramas/
-    ├── atividades/
-    │   ├── atividades.puml
-    │   └── atividades.png
-    ├── sequencia/
-    │   ├── sequencia.puml
-    │   └── sequencia.png
-    └── classes/
-        ├── classes.puml
-        └── classes.png
+└── biblioteca-uml/
+    ├── .gitignore
+    ├── docs/
+    │   ├── descricao-da-aplicacao.md
+    │   └── consideracoes-finais.md
+    └── diagramas/
+        ├── atividades/
+        │   ├── atividades.puml
+        │   └── atividades.png
+        ├── sequencia/
+        │   ├── sequencia.puml
+        │   └── sequencia.png
+        └── classes/
+            ├── classes.puml
+            └── classes.png
 ```
 
 ---
@@ -101,20 +99,21 @@ Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
 **Opção 3 – Linha de comando** (requer Java e o `plantuml.jar`):
 
 ```bash
-java -jar plantuml.jar -tpng diagramas/**/*.puml
+java -jar plantuml.jar -tpng biblioteca-uml/diagramas/**/*.puml
 ```
 
 ---
 
 ## 💭 Considerações finais
 
-[Resumo de 1 parágrafo: principais decisões de modelagem, dificuldades encontradas e aprendizados do grupo. O texto completo está em [`docs/consideracoes-finais.md`](docs/consideracoes-finais.md).]
+[Resumo de 1 parágrafo: principais decisões de modelagem, dificuldades encontradas e aprendizados do grupo. O texto completo está em [`biblioteca-uml/docs/consideracoes-finais.md`](biblioteca-uml/docs/consideracoes-finais.md).]
 
 ---
 
 ## 📌 Entrega e apresentação
 
-- Entrega realizada pela plataforma **Turing**, com todos os membros do grupo listados na descrição da atividade.
+- Organização e versionamento dos arquivos feitos neste repositório (GitHub).
+- Entrega oficial do trabalho realizada pela plataforma **Turing**, em formato **PDF** (capa + descrição + os três diagramas + considerações finais), com todos os membros do grupo listados na descrição da atividade.
 - Apresentação **obrigatória** para obtenção da nota (presença mínima de 75% dos integrantes).
 
 ---
