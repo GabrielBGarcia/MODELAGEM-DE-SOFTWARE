@@ -1,0 +1,19 @@
+@startuml sequencia
+title Diagrama de Sequência – Realizar Empréstimo
+
+actor Usuario
+participant "Sistema" as Sistema
+participant "Exemplar" as Exemplar
+participant "Emprestimo" as Emprestimo
+
+Usuario -> Sistema : consultarLivro(titulo)
+Sistema --> Usuario : lista de livros
+Usuario -> Sistema : solicitarEmprestimo(livro)
+Sistema -> Exemplar : verificarDisponibilidade()
+Exemplar --> Sistema : disponível
+Sistema -> Emprestimo : criar(usuario, exemplar)
+Emprestimo --> Sistema : prazo de devolução
+Sistema --> Usuario : empréstimo confirmado
+
+' TODO: adicionar fluxo alternativo (alt/else) e demais participantes
+@enduml

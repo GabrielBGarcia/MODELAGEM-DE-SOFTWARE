@@ -46,20 +46,25 @@ A descrição completa (mínimo de 1 página) está em [`docs/descricao-da-aplic
 
 ## 🧩 Artefatos produzidos
 
-| # | Artefato | Descrição | Arquivo |
-|---|----------|-----------|---------|
-| 1 | **Diagrama de Atividades** | Fluxo principal do empréstimo à devolução, com decisões, fluxos alternativos (livro indisponível, multa) e raias por ator | [`diagramas/atividades`](diagramas/atividades) |
-| 2 | **Diagrama de Sequência** | Interação entre atores e sistema no cenário **“Realizar Empréstimo”** | [`diagramas/sequencia`](diagramas/sequencia) |
-| 3 | **Diagrama de Classes (macro)** | Classes principais, atributos, métodos, visibilidade, herança (`Usuario` → `Aluno`/`Professor`) e multiplicidades | [`diagramas/classes`](diagramas/classes) |
+Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
+
+| # | Artefato | Descrição | Código-fonte |
+|---|----------|-----------|--------------|
+| 1 | **Diagrama de Atividades** | Fluxo principal do empréstimo à devolução, com decisões, fluxos alternativos (livro indisponível, multa) e raias por ator | [`atividades.puml`](diagramas/atividades/atividades.puml) |
+| 2 | **Diagrama de Sequência** | Interação entre atores e sistema no cenário **“Realizar Empréstimo”** | [`sequencia.puml`](diagramas/sequencia/sequencia.puml) |
+| 3 | **Diagrama de Classes (macro)** | Classes principais, atributos, métodos, visibilidade, herança e multiplicidades | [`classes.puml`](diagramas/classes/classes.puml) |
+
+<!-- Descomente cada imagem depois de gerar o PNG correspondente.
 
 ### Diagrama de Atividades
-![Diagrama de Atividades](diagramas/atividades/diagrama-atividades.png)
+![Diagrama de Atividades](diagramas/atividades/atividades.png)
 
 ### Diagrama de Sequência
-![Diagrama de Sequência](diagramas/sequencia/diagrama-sequencia.png)
+![Diagrama de Sequência](diagramas/sequencia/sequencia.png)
 
 ### Diagrama de Classes
-![Diagrama de Classes](diagramas/classes/diagrama-classes.png)
+![Diagrama de Classes](diagramas/classes/classes.png)
+-->
 
 ---
 
@@ -68,40 +73,36 @@ A descrição completa (mínimo de 1 página) está em [`docs/descricao-da-aplic
 ```
 .
 ├── README.md
+├── .gitignore
 ├── docs/
-│   ├── capa.pdf
 │   ├── descricao-da-aplicacao.md
 │   ├── consideracoes-finais.md
-│   └── trabalho-completo.pdf      # versão entregue no Turing
+│   └── (capa e PDF final entregue no Turing)
 └── diagramas/
     ├── atividades/
-    │   ├── diagrama-atividades.png
-    │   └── diagrama-atividades.[drawio|puml|mdj]
+    │   ├── atividades.puml
+    │   └── atividades.png
     ├── sequencia/
-    │   ├── diagrama-sequencia.png
-    │   └── diagrama-sequencia.[drawio|puml|mdj]
+    │   ├── sequencia.puml
+    │   └── sequencia.png
     └── classes/
-        ├── diagrama-classes.png
-        └── diagrama-classes.[drawio|puml|mdj]
+        ├── classes.puml
+        └── classes.png
 ```
-
-> Os arquivos-fonte (`.drawio`, `.puml`, `.mdj`) ficam versionados junto das imagens para permitir edição futura.
 
 ---
 
-## 🛠️ Ferramentas utilizadas
+## 🛠️ Como gerar as imagens (PlantUML)
 
-- [Draw.io (diagrams.net)](https://app.diagrams.net/)
-- [PlantUML](https://plantuml.com/)
-- [StarUML](https://staruml.io/)
+**Opção 1 – VS Code:** instale a extensão *PlantUML*, abra o `.puml` e use `Alt + D` para visualizar. Para exportar, clique com o botão direito → *Export Current Diagram*.
 
-*(Mantenha apenas as que o grupo realmente usou.)*
+**Opção 2 – Online:** cole o código em [plantuml.com/plantuml](https://www.plantuml.com/plantuml) e baixe o PNG.
 
-### Como visualizar/editar os diagramas
+**Opção 3 – Linha de comando** (requer Java e o `plantuml.jar`):
 
-- **Draw.io:** abra [app.diagrams.net](https://app.diagrams.net/) → *Arquivo → Abrir de → Dispositivo* → selecione o `.drawio`.
-- **PlantUML:** use a extensão do VS Code *PlantUML* ou o [servidor online](https://www.plantuml.com/plantuml) para renderizar o `.puml`.
-- **StarUML:** abra o arquivo `.mdj` diretamente no programa.
+```bash
+java -jar plantuml.jar -tpng diagramas/**/*.puml
+```
 
 ---
 

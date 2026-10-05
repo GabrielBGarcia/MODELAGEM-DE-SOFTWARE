@@ -1,0 +1,55 @@
+@startuml classes
+title Diagrama de Classes (macro) – Biblioteca Universitária
+
+abstract class Usuario {
+  - id : int
+  - nome : String
+  - email : String
+  + consultarAcervo() : List<Livro>
+}
+class Aluno {
+  - matricula : String
+}
+class Professor {
+  - siape : String
+}
+class Bibliotecario {
+  - matriculaFuncional : String
+}
+class Livro {
+  - titulo : String
+  - autor : String
+  - isbn : String
+}
+class Exemplar {
+  - codigo : String
+  - disponivel : boolean
+}
+class Emprestimo {
+  - dataEmprestimo : Date
+  - dataPrevistaDevolucao : Date
+  - dataDevolucao : Date
+  + renovar() : boolean
+  + devolver() : void
+}
+class Reserva {
+  - dataReserva : Date
+}
+class Multa {
+  - valor : double
+  - paga : boolean
+  + calcular() : double
+}
+
+Usuario <|-- Aluno
+Usuario <|-- Professor
+Livro "1" *-- "1..*" Exemplar
+Usuario "1" -- "0..*" Emprestimo
+Exemplar "1" -- "0..*" Emprestimo
+Usuario "1" -- "0..*" Reserva
+Livro "1" -- "0..*" Reserva
+Emprestimo "1" -- "0..1" Multa
+Bibliotecario "1" -- "0..*" Livro : gerencia >
+
+' TODO: revisar métodos, visibilidade e multiplicidades
+@enduml

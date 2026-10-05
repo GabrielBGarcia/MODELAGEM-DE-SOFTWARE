@@ -1,0 +1,33 @@
+@startuml atividades
+title Diagrama de Atividades – Empréstimo e Devolução
+
+|Usuário|
+start
+:Consultar livro;
+|Sistema|
+if (Exemplar disponível?) then (sim)
+  |Usuário|
+  :Solicitar empréstimo;
+  |Sistema|
+  :Registrar empréstimo e prazo;
+else (não)
+  |Usuário|
+  :Realizar reserva;
+  stop
+endif
+
+|Usuário|
+:Devolver obra;
+|Bibliotecário|
+:Verificar atraso;
+if (Houve atraso?) then (sim)
+  |Sistema de Multas|
+  :Calcular e aplicar multa;
+else (não)
+endif
+|Sistema|
+:Registrar devolução;
+stop
+
+' TODO: completar (renovação, empréstimo negado, fork/join se houver)
+@enduml
