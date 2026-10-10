@@ -12,7 +12,7 @@
 | Gabriel Borges Garcia | [Matrícula] | [@usuario](https://github.com/usuario) |
 | Heitor Gonçalves Costa | [Matrícula] | [@usuario](https://github.com/usuario) |
 | Luís Henrique Oliveira de Jesus | [Matrícula] | [@usuario](https://github.com/usuario) |
-| Rafael [Sobrenome] | [Matrícula] | [@usuario](https://github.com/usuario) |
+| Rafael Barbosa | [Matrícula] | [@usuario](https://github.com/usuario) |
 
 **Professor:** [Diogo Oliveira Santos](http://www.docente.ufg.br/diogogyn100)
 
@@ -52,16 +52,16 @@ Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
 | 2 | **Diagrama de Sequência** | Interação entre atores e sistema no cenário **"Realizar Empréstimo"** | [`sequencia.puml`](biblioteca-uml/diagramas/sequencia/sequencia.puml) |
 | 3 | **Diagrama de Classes (macro)** | Classes principais, atributos, métodos, visibilidade, herança e multiplicidades | [`classes.puml`](biblioteca-uml/diagramas/classes/classes.puml) |
 
-<!-- Descomente cada imagem depois de gerar o PNG correspondente.
-
 ### Diagrama de Atividades
-![Diagrama de Atividades](biblioteca-uml/diagramas/atividades/atividades.png)
+![Diagrama de Atividades](biblioteca-uml/diagramas/atividades/atividades.svg)
+
+<!-- Descomente cada imagem depois de colocar o arquivo correspondente na pasta.
 
 ### Diagrama de Sequência
-![Diagrama de Sequência](biblioteca-uml/diagramas/sequencia/sequencia.png)
+![Diagrama de Sequência](biblioteca-uml/diagramas/sequencia/sequencia.svg)
 
 ### Diagrama de Classes
-![Diagrama de Classes](biblioteca-uml/diagramas/classes/classes.png)
+![Diagrama de Classes](biblioteca-uml/diagramas/classes/classes.svg)
 -->
 
 ---
@@ -79,13 +79,13 @@ Todos os diagramas são escritos em **PlantUML** (código-fonte em `.puml`).
     └── diagramas/
         ├── atividades/
         │   ├── atividades.puml
-        │   └── atividades.png
+        │   └── atividades.svg
         ├── sequencia/
         │   ├── sequencia.puml
-        │   └── sequencia.png
+        │   └── sequencia.svg
         └── classes/
             ├── classes.puml
-            └── classes.png
+            └── classes.svg
 ```
 
 ---
