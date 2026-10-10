@@ -1,33 +1,77 @@
 @startuml atividades
-title Diagrama de Atividades – Empréstimo e Devolução
+title Diagrama de Atividades – Empréstimo, Renovação e Devolução
+
+|#E6F2FF|Usuário|
+|#EAF7EA|Sistema|
+|#FFF4DC|Bibliotecário|
+|#FBE6E6|Sistema de Multas|
 
 |Usuário|
 start
-:Consultar livro;
+:Consultar livro no acervo;
+
 |Sistema|
-if (Exemplar disponível?) then (sim)
+:Buscar livro e exibir resultado;
+
+if (Existe exemplar disponível?) then (sim)
   |Usuário|
   :Solicitar empréstimo;
+
   |Sistema|
-  :Registrar empréstimo e prazo;
+  if (Usuário apto?\n(sem multa pendente e dentro do limite)) then (sim)
+    fork
+      :Registrar empréstimo;
+    fork again
+      :Marcar exemplar como indisponível;
+    fork again
+      :Calcular prazo de devolução;
+    end fork
+    :Confirmar empréstimo ao usuário;
+  else (não)
+    :Negar empréstimo;
+    |Usuário|
+    :Receber aviso de empréstimo negado;
+    stop
+  endif
 else (não)
   |Usuário|
-  :Realizar reserva;
+  :Solicitar reserva do livro;
+  |Sistema|
+  :Registrar reserva;
+  :Avisar usuário quando houver exemplar;
   stop
 endif
 
 |Usuário|
-:Devolver obra;
-|Bibliotecário|
-:Verificar atraso;
-if (Houve atraso?) then (sim)
-  |Sistema de Multas|
-  :Calcular e aplicar multa;
+if (Deseja renovar o empréstimo?) then (sim)
+  |Sistema|
+  if (Existe reserva de outro usuário?) then (sim)
+    :Negar renovação;
+  else (não)
+    :Estender prazo de devolução;
+  endif
 else (não)
 endif
+
+|Usuário|
+:Devolver a obra;
+
+|Bibliotecário|
+:Receber obra e verificar atraso;
+
+if (Houve atraso?) then (sim)
+  |Sistema de Multas|
+  :Calcular valor da multa;
+  |Bibliotecário|
+  :Aplicar multa ao usuário;
+  |Sistema|
+  :Registrar multa;
+else (não)
+endif
+
 |Sistema|
 :Registrar devolução;
+:Marcar exemplar como disponível;
 stop
 
-' TODO: completar (renovação, empréstimo negado, fork/join se houver)
 @enduml
