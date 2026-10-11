@@ -1,20 +1,39 @@
 @startuml classes
 title Diagrama de Classes (macro) – Biblioteca Universitária
 
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+hide empty members
+
 abstract class Usuario {
   - id : int
   - nome : String
   - email : String
-  + consultarAcervo() : List<Livro>
+  + podeEmprestar() : boolean
+  + possuiMultaPendente() : boolean
+  + {abstract} prazoEmprestimoDias() : int
+  + {abstract} limiteEmprestimos() : int
 }
 class Aluno {
   - matricula : String
+  + prazoEmprestimoDias() : int
+  + limiteEmprestimos() : int
 }
 class Professor {
   - siape : String
+  + prazoEmprestimoDias() : int
+  + limiteEmprestimos() : int
 }
 class Bibliotecario {
+  - nome : String
   - matriculaFuncional : String
+  + registrarDevolucao(emprestimo : Emprestimo) : void
+  + aplicarMulta(emprestimo : Emprestimo) : Multa
+}
+class Acervo {
+  + buscarLivros(termo : String) : List<Livro>
+  + adicionarLivro(livro : Livro) : void
+  + removerLivro(livro : Livro) : void
 }
 class Livro {
   - titulo : String
@@ -40,16 +59,37 @@ class Multa {
   - paga : boolean
   + calcular() : double
 }
+class CalculadoraDeMulta {
+  - valorPorDia : double
+  + calcular(emprestimo : Emprestimo) : double
+}
 
+'herança'
 Usuario <|-- Aluno
 Usuario <|-- Professor
+
+'associação simples entre usuario e emprestimo'
+Usuario "1" -- "0..*" Emprestimo : realiza >
+
+'associação direcionada'
+Reserva "0..*" --> "1" Usuario
+
+'associação direcionada'
+Bibliotecario "1..*" --> "1" Acervo : gerencia >
+
+'dependências'
+Bibliotecario ..> Emprestimo : registra devolucao >
+Bibliotecario ..> Multa : cria >
+
+'classe nova: acervo'
+Bibliotecario ..> CalculadoraDeMulta : usa >
+
+'classe nova: acervo'
+Acervo "1" o-- "0..*" Livro
+
+'macro'
 Livro "1" *-- "1..*" Exemplar
-Usuario "1" -- "0..*" Emprestimo
 Exemplar "1" -- "0..*" Emprestimo
-Usuario "1" -- "0..*" Reserva
 Livro "1" -- "0..*" Reserva
 Emprestimo "1" -- "0..1" Multa
-Bibliotecario "1" -- "0..*" Livro : gerencia >
-
-' TODO: revisar métodos, visibilidade e multiplicidades
 @enduml
