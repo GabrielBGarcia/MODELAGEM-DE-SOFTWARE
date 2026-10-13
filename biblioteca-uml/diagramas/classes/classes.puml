@@ -5,63 +5,80 @@ skinparam classAttributeIconSize 0
 skinparam shadowing false
 hide empty members
 
-abstract class Usuario {
-  - id : int
-  - nome : String
-  - email : String
-  + podeEmprestar() : boolean
-  + possuiMultaPendente() : boolean
-  + {abstract} prazoEmprestimoDias() : int
-  + {abstract} limiteEmprestimos() : int
+package "Aplicação da Biblioteca" {
+  abstract class Usuario {
+    - id : int
+    - nome : String
+    - email : String
+    + podeEmprestar() : boolean
+    + possuiMultaPendente() : boolean
+    + {abstract} prazoEmprestimoDias() : int
+    + {abstract} limiteEmprestimos() : int
+  }
+  class Aluno {
+    - matricula : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Professor {
+    - siape : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Bibliotecario {
+    - nome : String
+    - matriculaFuncional : String
+    + registrarDevolucao(emprestimo : Emprestimo) : void
+    + aplicarMulta(emprestimo : Emprestimo) : Multa
+  }
+  class Acervo {
+    + buscarLivros(termo : String) : List<Livro>
+    + adicionarLivro(livro : Livro) : void
+    + removerLivro(livro : Livro) : void
+  }
+  class Livro {
+    - titulo : String
+    - autor : String
+    - isbn : String
+    - edicao : String
+  }
+  class Categoria {
+    - id : int
+    - nome : String
+    - descricao : String
+  }
+  class Exemplar {
+    - codigo : String
+    - disponivel : boolean
+    - localizacao : String
+  }
+  class Emprestimo {
+    - dataEmprestimo : Date
+    - dataPrevistaDevolucao : Date
+    - dataDevolucao : Date
+    + renovar() : boolean
+    + devolver() : void
+  }
+  class Reserva {
+    - dataReserva : Date
+  }
+  class Notificacao {
+    - mensagem : String
+    - dataEnvio : Date
+    + enviar(usuario : Usuario) : void
+  }
 }
-class Aluno {
-  - matricula : String
-  + prazoEmprestimoDias() : int
-  + limiteEmprestimos() : int
-}
-class Professor {
-  - siape : String
-  + prazoEmprestimoDias() : int
-  + limiteEmprestimos() : int
-}
-class Bibliotecario {
-  - nome : String
-  - matriculaFuncional : String
-  + registrarDevolucao(emprestimo : Emprestimo) : void
-  + aplicarMulta(emprestimo : Emprestimo) : Multa
-}
-class Acervo {
-  + buscarLivros(termo : String) : List<Livro>
-  + adicionarLivro(livro : Livro) : void
-  + removerLivro(livro : Livro) : void
-}
-class Livro {
-  - titulo : String
-  - autor : String
-  - isbn : String
-}
-class Exemplar {
-  - codigo : String
-  - disponivel : boolean
-}
-class Emprestimo {
-  - dataEmprestimo : Date
-  - dataPrevistaDevolucao : Date
-  - dataDevolucao : Date
-  + renovar() : boolean
-  + devolver() : void
-}
-class Reserva {
-  - dataReserva : Date
-}
-class Multa {
-  - valor : double
-  - paga : boolean
-  + calcular() : double
-}
-class CalculadoraDeMulta {
-  - valorPorDia : double
-  + calcular(emprestimo : Emprestimo) : double
+
+package "Sistema de Multas (externo)" <<externo>> {
+  class Multa {
+    - valor : double
+    - paga : boolean
+    + calcular() : double
+  }
+  class CalculadoraDeMulta {
+    - valorPorDia : double
+    + calcular(emprestimo : Emprestimo) : double
+  }
 }
 
 'herança'
@@ -73,19 +90,22 @@ Usuario "1" -- "0..*" Emprestimo : realiza >
 
 'associação direcionada'
 Reserva "0..*" --> "1" Usuario
+Usuario "1" -- "0..*" Notificacao : recebe >
+Reserva "1" --> "0..*" Notificacao : gera >
 
 'associação direcionada'
 Bibliotecario "1..*" --> "1" Acervo : gerencia >
 
 'dependências'
 Bibliotecario ..> Emprestimo : registra devolucao >
-Bibliotecario ..> Multa : cria >
+Bibliotecario ..> Multa : solicita criação >
 
-'classe nova: acervo'
-Bibliotecario ..> CalculadoraDeMulta : usa >
+'integração com sistema externo'
+Bibliotecario ..> CalculadoraDeMulta : solicita cálculo >
 
 'classe nova: acervo'
 Acervo "1" o-- "0..*" Livro
+Categoria "1" -- "0..*" Livro : classifica >
 
 'macro'
 Livro "1" *-- "1..*" Exemplar
