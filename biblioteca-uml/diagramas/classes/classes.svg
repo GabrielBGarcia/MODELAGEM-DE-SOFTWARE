@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1562px" preserveAspectRatio="none" style="width:1018px;height:1562px;" version="1.1" viewBox="0 0 1018 1562" width="1018px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="436" x="284.5" y="18.6855">Diagrama de Classes (macro) - Biblioteca Universitária</text><!--MD5=[1d0a1351f651b2deb2cdfb1726224c42]
+cluster Aplicação da Biblioteca--><rect fill="#FFFFFF" height="1527" style="stroke:#000000;stroke-width:1.5;" width="745" x="7" y="29.6406"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="162" x="298.5" y="46.1738">Aplicação da Biblioteca</text><!--MD5=[de44db0bf72892bc5f45485f19913f3a]
+cluster Sistema de Multas--><rect fill="#FFFFFF" height="132" style="stroke:#000000;stroke-width:1.5;" width="236" x="776" y="232.6406"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="63" x="862.5" y="249.1738">«externo»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="128" x="830" y="266.7832">Sistema de Multas</text><!--MD5=[35a64b983c79880384a2fd9b61f0c24b]
+class Usuario--><rect codeLine="11" fill="#FEFECE" height="144.8516" id="Usuario" style="stroke:#A80036;stroke-width:1.5;" width="175" x="178.5" y="977.6406"/><ellipse cx="240.25" cy="993.6406" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M242.4375,995.4063 L238.2969,995.4063 L237.875,996.4375 L238.2969,996.4375 Q238.9063,996.4375 239.1719,996.6719 Q239.4375,996.9063 239.4375,997.2969 Q239.4375,997.6719 239.1719,997.9063 Q238.9063,998.1406 238.2969,998.1406 L236,998.1406 Q235.3906,998.1406 235.1328,997.9063 Q234.875,997.6719 234.875,997.2813 Q234.875,996.9063 235.1484,996.6641 Q235.4219,996.4219 236.0469,996.4375 L238.7188,989.7813 L237.6094,989.7813 Q237,989.7813 236.7344,989.5469 Q236.4688,989.3125 236.4688,988.9219 Q236.4688,988.5469 236.7344,988.3125 Q237,988.0781 237.6094,988.0781 L241.2813,988.0781 L244.6719,996.4375 Q245.2656,996.4375 245.4531,996.5781 Q245.8438,996.8438 245.8438,997.2969 Q245.8438,997.6719 245.5859,997.9063 Q245.3281,998.1406 244.7188,998.1406 L242.4219,998.1406 Q241.8125,998.1406 241.5469,997.9063 Q241.2813,997.6719 241.2813,997.2813 Q241.2813,996.9063 241.5469,996.6719 Q241.8125,996.4375 242.4219,996.4375 L242.8438,996.4375 L242.4375,995.4063 Z M241.7188,993.7031 L240.3594,990.3281 L238.9844,993.7031 L241.7188,993.7031 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="43" x="260.75" y="998.5508">Usuario</text><line style="stroke:#A80036;stroke-width:1.5;" x1="179.5" x2="352.5" y1="1009.6406" y2="1009.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="184.5" y="1025.0596">-id : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="184.5" y="1038.8955">-nome : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="184.5" y="1052.7314">-email : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="179.5" x2="352.5" y1="1059.1484" y2="1059.1484"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="184.5" y="1074.5674">+podeEmprestar() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="163" x="184.5" y="1088.4033">+possuiMultaPendente() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="145" x="184.5" y="1102.2393">+prazoEmprestimoDias() : int</text><text fill="#000000" font-family="sans-serif" font-size="11" font-style="italic" lengthAdjust="spacing" textLength="127" x="184.5" y="1116.0752">+limiteEmprestimos() : int</text><!--MD5=[2ac4372e56b643e485f07f2f0112fab2]
+class Aluno--><rect codeLine="20" fill="#FEFECE" height="89.5078" id="Aluno" style="stroke:#A80036;stroke-width:1.5;" width="150" x="83" y="1228.1406"/><ellipse cx="138.25" cy="1244.1406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M141.0156,1240.0156 Q141.1719,1239.7969 141.3594,1239.6875 Q141.5469,1239.5781 141.7656,1239.5781 Q142.1406,1239.5781 142.375,1239.8359 Q142.6094,1240.0938 142.6094,1240.7031 L142.6094,1242.1563 Q142.6094,1242.7656 142.375,1243.0313 Q142.1406,1243.2969 141.7656,1243.2969 Q141.4219,1243.2969 141.2188,1243.0938 Q141.0156,1242.9063 140.9063,1242.3906 Q140.8594,1242.0313 140.6719,1241.8438 Q140.3438,1241.4688 139.7344,1241.25 Q139.125,1241.0313 138.5,1241.0313 Q137.7344,1241.0313 137.1016,1241.3594 Q136.4688,1241.6875 135.9766,1242.4375 Q135.4844,1243.1875 135.4844,1244.2188 L135.4844,1245.3125 Q135.4844,1246.5469 136.375,1247.3672 Q137.2656,1248.1875 138.8594,1248.1875 Q139.7969,1248.1875 140.4531,1247.9375 Q140.8438,1247.7813 141.2656,1247.3438 Q141.5313,1247.0781 141.6797,1247 Q141.8281,1246.9219 142.0313,1246.9219 Q142.3594,1246.9219 142.6172,1247.1797 Q142.875,1247.4375 142.875,1247.7813 Q142.875,1248.125 142.5313,1248.5313 Q142.0313,1249.1094 141.2344,1249.4375 Q140.1563,1249.8906 138.8594,1249.8906 Q137.3438,1249.8906 136.1406,1249.2656 Q135.1563,1248.7656 134.4688,1247.6953 Q133.7813,1246.625 133.7813,1245.3438 L133.7813,1244.1875 Q133.7813,1242.8594 134.3984,1241.7109 Q135.0156,1240.5625 136.1094,1239.9453 Q137.2031,1239.3281 138.4375,1239.3281 Q139.1719,1239.3281 139.8203,1239.4922 Q140.4688,1239.6563 141.0156,1240.0156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="158.75" y="1249.0508">Aluno</text><line style="stroke:#A80036;stroke-width:1.5;" x1="84" x2="232" y1="1260.1406" y2="1260.1406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="84" x="89" y="1275.5596">-matricula : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="84" x2="232" y1="1281.9766" y2="1281.9766"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="89" y="1297.3955">+prazoEmprestimoDias() : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="89" y="1311.2314">+limiteEmprestimos() : int</text><!--MD5=[21bc47177812100412265a444b535d59]
+class Professor--><rect codeLine="25" fill="#FEFECE" height="89.5078" id="Professor" style="stroke:#A80036;stroke-width:1.5;" width="150" x="268" y="1228.1406"/><ellipse cx="311.8" cy="1244.1406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M314.5656,1240.0156 Q314.7219,1239.7969 314.9094,1239.6875 Q315.0969,1239.5781 315.3156,1239.5781 Q315.6906,1239.5781 315.925,1239.8359 Q316.1594,1240.0938 316.1594,1240.7031 L316.1594,1242.1563 Q316.1594,1242.7656 315.925,1243.0313 Q315.6906,1243.2969 315.3156,1243.2969 Q314.9719,1243.2969 314.7688,1243.0938 Q314.5656,1242.9063 314.4563,1242.3906 Q314.4094,1242.0313 314.2219,1241.8438 Q313.8938,1241.4688 313.2844,1241.25 Q312.675,1241.0313 312.05,1241.0313 Q311.2844,1241.0313 310.6516,1241.3594 Q310.0188,1241.6875 309.5266,1242.4375 Q309.0344,1243.1875 309.0344,1244.2188 L309.0344,1245.3125 Q309.0344,1246.5469 309.925,1247.3672 Q310.8156,1248.1875 312.4094,1248.1875 Q313.3469,1248.1875 314.0031,1247.9375 Q314.3938,1247.7813 314.8156,1247.3438 Q315.0813,1247.0781 315.2297,1247 Q315.3781,1246.9219 315.5813,1246.9219 Q315.9094,1246.9219 316.1672,1247.1797 Q316.425,1247.4375 316.425,1247.7813 Q316.425,1248.125 316.0813,1248.5313 Q315.5813,1249.1094 314.7844,1249.4375 Q313.7063,1249.8906 312.4094,1249.8906 Q310.8938,1249.8906 309.6906,1249.2656 Q308.7063,1248.7656 308.0188,1247.6953 Q307.3313,1246.625 307.3313,1245.3438 L307.3313,1244.1875 Q307.3313,1242.8594 307.9484,1241.7109 Q308.5656,1240.5625 309.6594,1239.9453 Q310.7531,1239.3281 311.9875,1239.3281 Q312.7219,1239.3281 313.3703,1239.4922 Q314.0188,1239.6563 314.5656,1240.0156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="332.2" y="1249.0508">Professor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="269" x2="417" y1="1260.1406" y2="1260.1406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="274" y="1275.5596">-siape : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="269" x2="417" y1="1281.9766" y2="1281.9766"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="274" y="1297.3955">+prazoEmprestimoDias() : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="274" y="1311.2314">+limiteEmprestimos() : int</text><!--MD5=[1e386a12b057c317c649c65d263c59e8]
+class Bibliotecario--><rect codeLine="30" fill="#FEFECE" height="103.3438" id="Bibliotecario" style="stroke:#A80036;stroke-width:1.5;" width="266" x="459" y="65.6406"/><ellipse cx="553.75" cy="81.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M556.5156,77.5156 Q556.6719,77.2969 556.8594,77.1875 Q557.0469,77.0781 557.2656,77.0781 Q557.6406,77.0781 557.875,77.3359 Q558.1094,77.5938 558.1094,78.2031 L558.1094,79.6563 Q558.1094,80.2656 557.875,80.5313 Q557.6406,80.7969 557.2656,80.7969 Q556.9219,80.7969 556.7188,80.5938 Q556.5156,80.4063 556.4063,79.8906 Q556.3594,79.5313 556.1719,79.3438 Q555.8438,78.9688 555.2344,78.75 Q554.625,78.5313 554,78.5313 Q553.2344,78.5313 552.6016,78.8594 Q551.9688,79.1875 551.4766,79.9375 Q550.9844,80.6875 550.9844,81.7188 L550.9844,82.8125 Q550.9844,84.0469 551.875,84.8672 Q552.7656,85.6875 554.3594,85.6875 Q555.2969,85.6875 555.9531,85.4375 Q556.3438,85.2813 556.7656,84.8438 Q557.0313,84.5781 557.1797,84.5 Q557.3281,84.4219 557.5313,84.4219 Q557.8594,84.4219 558.1172,84.6797 Q558.375,84.9375 558.375,85.2813 Q558.375,85.625 558.0313,86.0313 Q557.5313,86.6094 556.7344,86.9375 Q555.6563,87.3906 554.3594,87.3906 Q552.8438,87.3906 551.6406,86.7656 Q550.6563,86.2656 549.9688,85.1953 Q549.2813,84.125 549.2813,82.8438 L549.2813,81.6875 Q549.2813,80.3594 549.8984,79.2109 Q550.5156,78.0625 551.6094,77.4453 Q552.7031,76.8281 553.9375,76.8281 Q554.6719,76.8281 555.3203,76.9922 Q555.9688,77.1563 556.5156,77.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="574.25" y="86.5508">Bibliotecario</text><line style="stroke:#A80036;stroke-width:1.5;" x1="460" x2="724" y1="97.6406" y2="97.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="465" y="113.0596">-nome : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="465" y="126.8955">-matriculaFuncional : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="460" x2="724" y1="133.3125" y2="133.3125"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="254" x="465" y="148.7314">+registrarDevolucao(emprestimo : Emprestimo) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="465" y="162.5674">+aplicarMulta(emprestimo : Emprestimo) : Multa</text><!--MD5=[d487267cbea235e4d6175ee61651cc8e]
+class Acervo--><rect codeLine="38" fill="#FEFECE" height="81.5078" id="Acervo" style="stroke:#A80036;stroke-width:1.5;" width="216" x="182" y="276.6406"/><ellipse cx="267.75" cy="292.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M270.5156,288.5156 Q270.6719,288.2969 270.8594,288.1875 Q271.0469,288.0781 271.2656,288.0781 Q271.6406,288.0781 271.875,288.3359 Q272.1094,288.5938 272.1094,289.2031 L272.1094,290.6563 Q272.1094,291.2656 271.875,291.5313 Q271.6406,291.7969 271.2656,291.7969 Q270.9219,291.7969 270.7188,291.5938 Q270.5156,291.4063 270.4063,290.8906 Q270.3594,290.5313 270.1719,290.3438 Q269.8438,289.9688 269.2344,289.75 Q268.625,289.5313 268,289.5313 Q267.2344,289.5313 266.6016,289.8594 Q265.9688,290.1875 265.4766,290.9375 Q264.9844,291.6875 264.9844,292.7188 L264.9844,293.8125 Q264.9844,295.0469 265.875,295.8672 Q266.7656,296.6875 268.3594,296.6875 Q269.2969,296.6875 269.9531,296.4375 Q270.3438,296.2813 270.7656,295.8438 Q271.0313,295.5781 271.1797,295.5 Q271.3281,295.4219 271.5313,295.4219 Q271.8594,295.4219 272.1172,295.6797 Q272.375,295.9375 272.375,296.2813 Q272.375,296.625 272.0313,297.0313 Q271.5313,297.6094 270.7344,297.9375 Q269.6563,298.3906 268.3594,298.3906 Q266.8438,298.3906 265.6406,297.7656 Q264.6563,297.2656 263.9688,296.1953 Q263.2813,295.125 263.2813,293.8438 L263.2813,292.6875 Q263.2813,291.3594 263.8984,290.2109 Q264.5156,289.0625 265.6094,288.4453 Q266.7031,287.8281 267.9375,287.8281 Q268.6719,287.8281 269.3203,287.9922 Q269.9688,288.1563 270.5156,288.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="36" x="288.25" y="297.5508">Acervo</text><line style="stroke:#A80036;stroke-width:1.5;" x1="183" x2="397" y1="308.6406" y2="308.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="204" x="188" y="324.0596">+buscarLivros(termo : String) : List&lt;Livro&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="188" y="337.8955">+adicionarLivro(livro : Livro) : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="188" y="351.7314">+removerLivro(livro : Livro) : void</text><!--MD5=[7e1ce8ab2bf669717f28e918f4971b9a]
+class Categoria--><rect codeLine="43" fill="#FEFECE" height="81.5078" id="Categoria" style="stroke:#A80036;stroke-width:1.5;" width="101" x="408.5" y="639.1406"/><ellipse cx="430.25" cy="655.1406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M433.0156,651.0156 Q433.1719,650.7969 433.3594,650.6875 Q433.5469,650.5781 433.7656,650.5781 Q434.1406,650.5781 434.375,650.8359 Q434.6094,651.0938 434.6094,651.7031 L434.6094,653.1563 Q434.6094,653.7656 434.375,654.0313 Q434.1406,654.2969 433.7656,654.2969 Q433.4219,654.2969 433.2188,654.0938 Q433.0156,653.9063 432.9063,653.3906 Q432.8594,653.0313 432.6719,652.8438 Q432.3438,652.4688 431.7344,652.25 Q431.125,652.0313 430.5,652.0313 Q429.7344,652.0313 429.1016,652.3594 Q428.4688,652.6875 427.9766,653.4375 Q427.4844,654.1875 427.4844,655.2188 L427.4844,656.3125 Q427.4844,657.5469 428.375,658.3672 Q429.2656,659.1875 430.8594,659.1875 Q431.7969,659.1875 432.4531,658.9375 Q432.8438,658.7813 433.2656,658.3438 Q433.5313,658.0781 433.6797,658 Q433.8281,657.9219 434.0313,657.9219 Q434.3594,657.9219 434.6172,658.1797 Q434.875,658.4375 434.875,658.7813 Q434.875,659.125 434.5313,659.5313 Q434.0313,660.1094 433.2344,660.4375 Q432.1563,660.8906 430.8594,660.8906 Q429.3438,660.8906 428.1406,660.2656 Q427.1563,659.7656 426.4688,658.6953 Q425.7813,657.625 425.7813,656.3438 L425.7813,655.1875 Q425.7813,653.8594 426.3984,652.7109 Q427.0156,651.5625 428.1094,650.9453 Q429.2031,650.3281 430.4375,650.3281 Q431.1719,650.3281 431.8203,650.4922 Q432.4688,650.6563 433.0156,651.0156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="54" x="445.75" y="660.0508">Categoria</text><line style="stroke:#A80036;stroke-width:1.5;" x1="409.5" x2="508.5" y1="671.1406" y2="671.1406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="414.5" y="686.5596">-id : int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="414.5" y="700.3955">-nome : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="414.5" y="714.2314">-descricao : String</text><!--MD5=[f45ed34e1fd2d44e62b0a8e0606f603d]
+class Livro--><rect codeLine="48" fill="#FEFECE" height="131.0156" id="Livro" style="stroke:#A80036;stroke-width:1.5;" width="206" x="77" y="419.6406"/><ellipse cx="162.75" cy="435.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M165.5156,431.5156 Q165.6719,431.2969 165.8594,431.1875 Q166.0469,431.0781 166.2656,431.0781 Q166.6406,431.0781 166.875,431.3359 Q167.1094,431.5938 167.1094,432.2031 L167.1094,433.6563 Q167.1094,434.2656 166.875,434.5313 Q166.6406,434.7969 166.2656,434.7969 Q165.9219,434.7969 165.7188,434.5938 Q165.5156,434.4063 165.4063,433.8906 Q165.3594,433.5313 165.1719,433.3438 Q164.8438,432.9688 164.2344,432.75 Q163.625,432.5313 163,432.5313 Q162.2344,432.5313 161.6016,432.8594 Q160.9688,433.1875 160.4766,433.9375 Q159.9844,434.6875 159.9844,435.7188 L159.9844,436.8125 Q159.9844,438.0469 160.875,438.8672 Q161.7656,439.6875 163.3594,439.6875 Q164.2969,439.6875 164.9531,439.4375 Q165.3438,439.2813 165.7656,438.8438 Q166.0313,438.5781 166.1797,438.5 Q166.3281,438.4219 166.5313,438.4219 Q166.8594,438.4219 167.1172,438.6797 Q167.375,438.9375 167.375,439.2813 Q167.375,439.625 167.0313,440.0313 Q166.5313,440.6094 165.7344,440.9375 Q164.6563,441.3906 163.3594,441.3906 Q161.8438,441.3906 160.6406,440.7656 Q159.6563,440.2656 158.9688,439.1953 Q158.2813,438.125 158.2813,436.8438 L158.2813,435.6875 Q158.2813,434.3594 158.8984,433.2109 Q159.5156,432.0625 160.6094,431.4453 Q161.7031,430.8281 162.9375,430.8281 Q163.6719,430.8281 164.3203,430.9922 Q164.9688,431.1563 165.5156,431.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="26" x="183.25" y="440.5508">Livro</text><line style="stroke:#A80036;stroke-width:1.5;" x1="78" x2="282" y1="451.6406" y2="451.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="83" y="467.0596">-titulo : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="83" y="480.8955">-autor : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="83" y="494.7314">-isbn : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="83" y="508.5674">-edicao : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="78" x2="282" y1="514.9844" y2="514.9844"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="83" y="530.4033">+buscarExemplarDisponivel() : Exemplar</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="159" x="83" y="544.2393">+possuiReservaAtiva() : boolean</text><!--MD5=[9ce7b05c4ceb79abae946791a8601e74]
+class Exemplar--><rect codeLine="56" fill="#FEFECE" height="117.1797" id="Exemplar" style="stroke:#A80036;stroke-width:1.5;" width="145" x="174.5" y="1423.6406"/><ellipse cx="216.95" cy="1439.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M219.7156,1435.5156 Q219.8719,1435.2969 220.0594,1435.1875 Q220.2469,1435.0781 220.4656,1435.0781 Q220.8406,1435.0781 221.075,1435.3359 Q221.3094,1435.5938 221.3094,1436.2031 L221.3094,1437.6563 Q221.3094,1438.2656 221.075,1438.5313 Q220.8406,1438.7969 220.4656,1438.7969 Q220.1219,1438.7969 219.9188,1438.5938 Q219.7156,1438.4063 219.6063,1437.8906 Q219.5594,1437.5313 219.3719,1437.3438 Q219.0438,1436.9688 218.4344,1436.75 Q217.825,1436.5313 217.2,1436.5313 Q216.4344,1436.5313 215.8016,1436.8594 Q215.1688,1437.1875 214.6766,1437.9375 Q214.1844,1438.6875 214.1844,1439.7188 L214.1844,1440.8125 Q214.1844,1442.0469 215.075,1442.8672 Q215.9656,1443.6875 217.5594,1443.6875 Q218.4969,1443.6875 219.1531,1443.4375 Q219.5438,1443.2813 219.9656,1442.8438 Q220.2313,1442.5781 220.3797,1442.5 Q220.5281,1442.4219 220.7313,1442.4219 Q221.0594,1442.4219 221.3172,1442.6797 Q221.575,1442.9375 221.575,1443.2813 Q221.575,1443.625 221.2313,1444.0313 Q220.7313,1444.6094 219.9344,1444.9375 Q218.8563,1445.3906 217.5594,1445.3906 Q216.0438,1445.3906 214.8406,1444.7656 Q213.8563,1444.2656 213.1688,1443.1953 Q212.4813,1442.125 212.4813,1440.8438 L212.4813,1439.6875 Q212.4813,1438.3594 213.0984,1437.2109 Q213.7156,1436.0625 214.8094,1435.4453 Q215.9031,1434.8281 217.1375,1434.8281 Q217.8719,1434.8281 218.5203,1434.9922 Q219.1688,1435.1563 219.7156,1435.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52" x="237.05" y="1444.5508">Exemplar</text><line style="stroke:#A80036;stroke-width:1.5;" x1="175.5" x2="318.5" y1="1455.6406" y2="1455.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="180.5" y="1471.0596">-codigo : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="180.5" y="1484.8955">-disponivel : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="180.5" y="1498.7314">-localizacao : String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="175.5" x2="318.5" y1="1505.1484" y2="1505.1484"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="180.5" y="1520.5674">+marcarDisponivel() : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="180.5" y="1534.4033">+marcarIndisponivel() : void</text><!--MD5=[1292808ff5309edb373b19bad3ec6c42]
+class Emprestimo--><rect codeLine="65" fill="#FEFECE" height="144.8516" id="Emprestimo" style="stroke:#A80036;stroke-width:1.5;" width="158" x="456" y="1200.6406"/><ellipse cx="497.1" cy="1216.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M499.8656,1212.5156 Q500.0219,1212.2969 500.2094,1212.1875 Q500.3969,1212.0781 500.6156,1212.0781 Q500.9906,1212.0781 501.225,1212.3359 Q501.4594,1212.5938 501.4594,1213.2031 L501.4594,1214.6563 Q501.4594,1215.2656 501.225,1215.5313 Q500.9906,1215.7969 500.6156,1215.7969 Q500.2719,1215.7969 500.0688,1215.5938 Q499.8656,1215.4063 499.7563,1214.8906 Q499.7094,1214.5313 499.5219,1214.3438 Q499.1938,1213.9688 498.5844,1213.75 Q497.975,1213.5313 497.35,1213.5313 Q496.5844,1213.5313 495.9516,1213.8594 Q495.3188,1214.1875 494.8266,1214.9375 Q494.3344,1215.6875 494.3344,1216.7188 L494.3344,1217.8125 Q494.3344,1219.0469 495.225,1219.8672 Q496.1156,1220.6875 497.7094,1220.6875 Q498.6469,1220.6875 499.3031,1220.4375 Q499.6938,1220.2813 500.1156,1219.8438 Q500.3813,1219.5781 500.5297,1219.5 Q500.6781,1219.4219 500.8813,1219.4219 Q501.2094,1219.4219 501.4672,1219.6797 Q501.725,1219.9375 501.725,1220.2813 Q501.725,1220.625 501.3813,1221.0313 Q500.8813,1221.6094 500.0844,1221.9375 Q499.0063,1222.3906 497.7094,1222.3906 Q496.1938,1222.3906 494.9906,1221.7656 Q494.0063,1221.2656 493.3188,1220.1953 Q492.6313,1219.125 492.6313,1217.8438 L492.6313,1216.6875 Q492.6313,1215.3594 493.2484,1214.2109 Q493.8656,1213.0625 494.9594,1212.4453 Q496.0531,1211.8281 497.2875,1211.8281 Q498.0219,1211.8281 498.6703,1211.9922 Q499.3188,1212.1563 499.8656,1212.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="516.9" y="1221.5508">Emprestimo</text><line style="stroke:#A80036;stroke-width:1.5;" x1="457" x2="613" y1="1232.6406" y2="1232.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="462" y="1248.0596">-dataEmprestimo : Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="462" y="1261.8955">-dataPrevistaDevolucao : Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="134" x="462" y="1275.7314">-dataDevolucao : Date [0..1]</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="462" y="1289.5674">-qtdRenovacoes : int</text><line style="stroke:#A80036;stroke-width:1.5;" x1="457" x2="613" y1="1295.9844" y2="1295.9844"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="462" y="1311.4033">+renovar() : boolean</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="462" y="1325.2393">+devolver() : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="462" y="1339.0752">+diasDeAtraso() : int</text><!--MD5=[6ea9d6598d9760662639554c9857ab6b]
+class Reserva--><rect codeLine="74" fill="#FEFECE" height="103.3438" id="Reserva" style="stroke:#A80036;stroke-width:1.5;" width="165" x="60.5" y="628.6406"/><ellipse cx="115.75" cy="644.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M118.5156,640.5156 Q118.6719,640.2969 118.8594,640.1875 Q119.0469,640.0781 119.2656,640.0781 Q119.6406,640.0781 119.875,640.3359 Q120.1094,640.5938 120.1094,641.2031 L120.1094,642.6563 Q120.1094,643.2656 119.875,643.5313 Q119.6406,643.7969 119.2656,643.7969 Q118.9219,643.7969 118.7188,643.5938 Q118.5156,643.4063 118.4063,642.8906 Q118.3594,642.5313 118.1719,642.3438 Q117.8438,641.9688 117.2344,641.75 Q116.625,641.5313 116,641.5313 Q115.2344,641.5313 114.6016,641.8594 Q113.9688,642.1875 113.4766,642.9375 Q112.9844,643.6875 112.9844,644.7188 L112.9844,645.8125 Q112.9844,647.0469 113.875,647.8672 Q114.7656,648.6875 116.3594,648.6875 Q117.2969,648.6875 117.9531,648.4375 Q118.3438,648.2813 118.7656,647.8438 Q119.0313,647.5781 119.1797,647.5 Q119.3281,647.4219 119.5313,647.4219 Q119.8594,647.4219 120.1172,647.6797 Q120.375,647.9375 120.375,648.2813 Q120.375,648.625 120.0313,649.0313 Q119.5313,649.6094 118.7344,649.9375 Q117.6563,650.3906 116.3594,650.3906 Q114.8438,650.3906 113.6406,649.7656 Q112.6563,649.2656 111.9688,648.1953 Q111.2813,647.125 111.2813,645.8438 L111.2813,644.6875 Q111.2813,643.3594 111.8984,642.2109 Q112.5156,641.0625 113.6094,640.4453 Q114.7031,639.8281 115.9375,639.8281 Q116.6719,639.8281 117.3203,639.9922 Q117.9688,640.1563 118.5156,640.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46" x="136.25" y="649.5508">Reserva</text><line style="stroke:#A80036;stroke-width:1.5;" x1="61.5" x2="224.5" y1="660.6406" y2="660.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="97" x="66.5" y="676.0596">-dataReserva : Date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="66.5" y="689.8955">-status : StatusReserva</text><line style="stroke:#A80036;stroke-width:1.5;" x1="61.5" x2="224.5" y1="696.3125" y2="696.3125"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="66.5" y="711.7314">+notificarDisponibilidade() : void</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="66.5" y="725.5674">+cancelar() : void</text><!--MD5=[02cb22e744f74fb46aa0e129bad093c6]
+class StatusReserva--><rect codeLine="80" fill="#FEFECE" height="89.6953" id="StatusReserva" style="stroke:#A80036;stroke-width:1.5;" width="113" x="260.5" y="635.1406"/><ellipse cx="275.5" cy="655.2344" fill="#EB937F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M274.3594,656.0313 L274.3594,658.5313 L278.6875,658.5313 L278.6875,657.6094 Q278.6875,657 278.9297,656.7344 Q279.1719,656.4688 279.5469,656.4688 Q279.9219,656.4688 280.1563,656.7344 Q280.3906,657 280.3906,657.6094 L280.3906,660.2344 L272.3906,660.2344 Q271.7656,660.2344 271.5078,660 Q271.25,659.7656 271.25,659.375 Q271.25,659 271.5156,658.7656 Q271.7813,658.5313 272.3906,658.5313 L272.6563,658.5313 L272.6563,651.875 L272.3906,651.875 Q271.7656,651.875 271.5078,651.6406 Q271.25,651.4063 271.25,651.0156 Q271.25,650.6406 271.5078,650.4063 Q271.7656,650.1719 272.3906,650.1719 L280.0156,650.1719 L280.0156,652.7656 Q280.0156,653.375 279.7891,653.6328 Q279.5625,653.8906 279.1719,653.8906 Q278.7969,653.8906 278.5625,653.6328 Q278.3281,653.375 278.3281,652.7656 L278.3281,651.875 L274.3594,651.875 L274.3594,654.3281 L275.8438,654.3281 Q275.8438,653.6719 275.9688,653.4844 Q276.2344,653.0781 276.7031,653.0781 Q277.0781,653.0781 277.3125,653.3359 Q277.5469,653.5938 277.5469,654.2031 L277.5469,656.1719 Q277.5469,656.7188 277.4219,656.9063 Q277.1563,657.2969 276.7031,657.2969 Q276.2344,657.2969 275.9688,656.8906 Q275.8438,656.7031 275.8438,656.0313 L274.3594,656.0313 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="288" y="652.5977">«enumeration»</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="81" x="289.5" y="667.6914">StatusReserva</text><line style="stroke:#A80036;stroke-width:1.5;" x1="261.5" x2="372.5" y1="675.3281" y2="675.3281"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="32" x="266.5" y="690.7471">ATIVA</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="266.5" y="704.583">ATENDIDA</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="266.5" y="718.4189">CANCELADA</text><!--MD5=[8b0f9d326df3a4c479d2e555689686ca]
+class Notificacao--><rect codeLine="85" fill="#FEFECE" height="89.5078" id="Notificacao" style="stroke:#A80036;stroke-width:1.5;" width="105" x="90.5" y="809.6406"/><ellipse cx="110.9" cy="825.6406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M113.6656,821.5156 Q113.8219,821.2969 114.0094,821.1875 Q114.1969,821.0781 114.4156,821.0781 Q114.7906,821.0781 115.025,821.3359 Q115.2594,821.5938 115.2594,822.2031 L115.2594,823.6563 Q115.2594,824.2656 115.025,824.5313 Q114.7906,824.7969 114.4156,824.7969 Q114.0719,824.7969 113.8688,824.5938 Q113.6656,824.4063 113.5563,823.8906 Q113.5094,823.5313 113.3219,823.3438 Q112.9938,822.9688 112.3844,822.75 Q111.775,822.5313 111.15,822.5313 Q110.3844,822.5313 109.7516,822.8594 Q109.1188,823.1875 108.6266,823.9375 Q108.1344,824.6875 108.1344,825.7188 L108.1344,826.8125 Q108.1344,828.0469 109.025,828.8672 Q109.9156,829.6875 111.5094,829.6875 Q112.4469,829.6875 113.1031,829.4375 Q113.4938,829.2813 113.9156,828.8438 Q114.1813,828.5781 114.3297,828.5 Q114.4781,828.4219 114.6813,828.4219 Q115.0094,828.4219 115.2672,828.6797 Q115.525,828.9375 115.525,829.2813 Q115.525,829.625 115.1813,830.0313 Q114.6813,830.6094 113.8844,830.9375 Q112.8063,831.3906 111.5094,831.3906 Q109.9938,831.3906 108.7906,830.7656 Q107.8063,830.2656 107.1188,829.1953 Q106.4313,828.125 106.4313,826.8438 L106.4313,825.6875 Q106.4313,824.3594 107.0484,823.2109 Q107.6656,822.0625 108.7594,821.4453 Q109.8531,820.8281 111.0875,820.8281 Q111.8219,820.8281 112.4703,820.9922 Q113.1188,821.1563 113.6656,821.5156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="61" x="126.1" y="830.5508">Notificacao</text><line style="stroke:#A80036;stroke-width:1.5;" x1="91.5" x2="194.5" y1="841.6406" y2="841.6406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="96.5" y="857.0596">-mensagem : String</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="96.5" y="870.8955">-dataEnvio : Date</text><line style="stroke:#A80036;stroke-width:1.5;" x1="91.5" x2="194.5" y1="877.3125" y2="877.3125"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="73" x="96.5" y="892.7314">+enviar() : void</text><!--MD5=[47d21cf8a62f70ab3e59d629a0b65fa6]
+class Multa--><rect codeLine="90" fill="#FEFECE" height="89.5078" id="Multa" style="stroke:#A80036;stroke-width:1.5;" width="87" x="553.5" y="1437.1406"/><ellipse cx="580.2" cy="1453.1406" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M582.9656,1449.0156 Q583.1219,1448.7969 583.3094,1448.6875 Q583.4969,1448.5781 583.7156,1448.5781 Q584.0906,1448.5781 584.325,1448.8359 Q584.5594,1449.0938 584.5594,1449.7031 L584.5594,1451.1563 Q584.5594,1451.7656 584.325,1452.0313 Q584.0906,1452.2969 583.7156,1452.2969 Q583.3719,1452.2969 583.1688,1452.0938 Q582.9656,1451.9063 582.8563,1451.3906 Q582.8094,1451.0313 582.6219,1450.8438 Q582.2938,1450.4688 581.6844,1450.25 Q581.075,1450.0313 580.45,1450.0313 Q579.6844,1450.0313 579.0516,1450.3594 Q578.4188,1450.6875 577.9266,1451.4375 Q577.4344,1452.1875 577.4344,1453.2188 L577.4344,1454.3125 Q577.4344,1455.5469 578.325,1456.3672 Q579.2156,1457.1875 580.8094,1457.1875 Q581.7469,1457.1875 582.4031,1456.9375 Q582.7938,1456.7813 583.2156,1456.3438 Q583.4813,1456.0781 583.6297,1456 Q583.7781,1455.9219 583.9813,1455.9219 Q584.3094,1455.9219 584.5672,1456.1797 Q584.825,1456.4375 584.825,1456.7813 Q584.825,1457.125 584.4813,1457.5313 Q583.9813,1458.1094 583.1844,1458.4375 Q582.1063,1458.8906 580.8094,1458.8906 Q579.2938,1458.8906 578.0906,1458.2656 Q577.1063,1457.7656 576.4188,1456.6953 Q575.7313,1455.625 575.7313,1454.3438 L575.7313,1453.1875 Q575.7313,1451.8594 576.3484,1450.7109 Q576.9656,1449.5625 578.0594,1448.9453 Q579.1531,1448.3281 580.3875,1448.3281 Q581.1219,1448.3281 581.7703,1448.4922 Q582.4188,1448.6563 582.9656,1449.0156 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="596.8" y="1458.0508">Multa</text><line style="stroke:#A80036;stroke-width:1.5;" x1="554.5" x2="639.5" y1="1469.1406" y2="1469.1406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="559.5" y="1484.5596">-valor : double</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="75" x="559.5" y="1498.3955">-paga : boolean</text><line style="stroke:#A80036;stroke-width:1.5;" x1="554.5" x2="639.5" y1="1504.8125" y2="1504.8125"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="71" x="559.5" y="1520.2314">+pagar() : void</text><!--MD5=[78e39570b84ff1d3ea4b79bcce007197]
+class CalculadoraDeMulta--><rect codeLine="98" fill="#FEFECE" height="62.0234" id="CalculadoraDeMulta" style="stroke:#A80036;stroke-width:1.5;" width="204" x="792" y="286.6406"/><ellipse cx="834" cy="306.7344" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M834.9531,303.375 L834.9531,310.0313 L836.6719,310.0313 Q837.2813,310.0313 837.5469,310.2656 Q837.8125,310.5 837.8125,310.8906 Q837.8125,311.2656 837.5469,311.5 Q837.2813,311.7344 836.6719,311.7344 L831.5313,311.7344 Q830.9219,311.7344 830.6563,311.5 Q830.3906,311.2656 830.3906,310.875 Q830.3906,310.5 830.6563,310.2656 Q830.9219,310.0313 831.5313,310.0313 L833.25,310.0313 L833.25,303.375 L831.5313,303.375 Q830.9219,303.375 830.6563,303.1406 Q830.3906,302.9063 830.3906,302.5156 Q830.3906,302.1406 830.6563,301.9063 Q830.9219,301.6719 831.5313,301.6719 L836.6719,301.6719 Q837.2813,301.6719 837.5469,301.9063 Q837.8125,302.1406 837.8125,302.5156 Q837.8125,302.9063 837.5469,303.1406 Q837.2813,303.375 836.6719,303.375 L834.9531,303.375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="61" x="879.5" y="304.0977">«interface»</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="854" y="319.1914">CalculadoraDeMulta</text><line style="stroke:#A80036;stroke-width:1.5;" x1="793" x2="995" y1="326.8281" y2="326.8281"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="192" x="798" y="342.2471">+calcularValor(diasAtraso : int) : double</text><!--MD5=[122c35cc3eff8675a2890f12b76b64b4]
+reverse link Usuario to Aluno--><path codeLine="105" d="M221.99,1141.2006 C207.35,1171.1606 191.69,1203.2006 179.53,1228.0906 " fill="none" id="Usuario-backto-Aluno" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="215.86,1137.7906,230.94,1122.8906,228.44,1143.9306,215.86,1137.7906" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[147008641d3b5abc247495df07682e68]
+reverse link Usuario to Professor--><path codeLine="106" d="M297.67,1142.0506 C308.03,1171.7606 319.06,1203.4406 327.65,1228.0906 " fill="none" id="Usuario-backto-Professor" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="290.97,1144.0806,291,1122.8906,304.19,1139.4806,290.97,1144.0806" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[badeb309eb62bdbefc2c0bdd9c04e927]
+reverse link Acervo to Livro--><path codeLine="109" d="M255.99,369.8106 C245.53,385.5506 233.88,403.0806 222.9,419.5906 " fill="none" id="Acervo-backto-Livro" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="263.37,358.7006,256.717,361.4822,256.7258,368.6933,263.3788,365.9117,263.37,358.7006" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="251.7563" y="379.7727">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="206.7041" y="408.6009">0..*</text><!--MD5=[d954d70ba8c08b450e9a556e95a94866]
+link Livro to Categoria--><path codeLine="110" d="M277.53,550.6806 C313.44,574.8006 354.3,602.6406 391,628.6406 C396.64,632.6406 402.5,636.8706 408.31,641.1106 " fill="none" id="Livro-Categoria" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="354.1126,592.6601,348.3443,585.0985,345.0014,589.9331,354.1126,592.6601" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="359" y="595.1357">classificado em</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="267.1036" y="572.2376">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="381.5682" y="631.8934">1..*</text><!--MD5=[dfe43b0e93dc6a5e6be335e6257e8ce0]
+reverse link Livro to Exemplar--><path codeLine="111" d="M82.12,560.2106 C50.76,592.5106 24,633.4606 24,679.1406 C24,679.1406 24,679.1406 24,1274.1406 C24,1357.7306 109.21,1417.0806 174.29,1450.2106 " fill="none" id="Livro-backto-Exemplar" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="91.52,550.9006,84.4413,552.2764,82.9887,559.3396,90.0673,557.9639,91.52,550.9006" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="75.0346" y="572.0196">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="146.4067" y="1443.9081">1..*</text><!--MD5=[3ee66702991d1056622f60d47331ef40]
+link Usuario to Emprestimo--><path codeLine="114" d="M353.34,1122.8906 C386.32,1149.9906 423.64,1180.6506 455.83,1207.1006 " fill="none" id="Usuario-Emprestimo" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="416.8632,1164.9906,411.7403,1156.9777,408.0088,1161.5192,416.8632,1164.9906" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="422" y="1167.1357">realiza</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="354.331" y="1144.1061">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="427.8883" y="1198.0238">0..*</text><!--MD5=[120d65c77294fe397060430d8386293f]
+link Emprestimo to Exemplar--><path codeLine="115" d="M455.85,1331.3406 C449.14,1336.1806 442.45,1341.0006 436,1345.6406 C399.16,1372.1506 358.22,1401.5106 323.89,1426.1106 " fill="none" id="Emprestimo-to-Exemplar" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="319.74,1429.0806,329.3879,1427.1012,323.8077,1426.1731,324.7358,1420.5929,319.74,1429.0806" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="389.9388,1387.733,398.9999,1384.8439,395.5712,1380.0697,389.9388,1387.733" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="403" y="1390.1357">refere-se a</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="427.9101" y="1333.3289">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="327.6023" y="1420.2878">1</text><!--MD5=[bf236d0a42e6ad480ad7367ca7e88834]
+link Emprestimo to Multa--><path codeLine="116" d="M556.42,1345.6706 C564.96,1374.1506 574.56,1406.2206 582.28,1432.0006 " fill="none" id="Emprestimo-to-Multa" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="583.8,1437.0706,585.0586,1427.3025,582.3698,1432.2795,577.3928,1429.5908,583.8,1437.0706" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="575.4348,1389.6061,575.6546,1380.0981,570.0239,1381.7848,575.4348,1389.6061" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="583" y="1390.1357">gera</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="551.128" y="1366.8651">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="557.9431" y="1426.1749">0..1</text><!--MD5=[00d8d260a0b491a5858b872251a356dd]
+link Reserva to Usuario--><path codeLine="118" d="M175.8,731.9206 C204.98,780.4506 245.38,856.7906 261,929.6406 C263.93,943.2906 265.66,958.0206 266.63,972.3106 " fill="none" id="Reserva-to-Usuario" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="266.95,977.5506,270.4022,968.3266,266.6497,972.5597,262.4167,968.8071,266.95,977.5506" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="258.7673,859.4937,258.3195,849.9936,252.821,852.0712,258.7673,859.4937" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="266" y="860.1357">solicitante</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="158.8638" y="753.4492">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="259.687" y="966.7607">1</text><!--MD5=[1bfc67c1356d2d067fb1065801b71c18]
+link Livro to Reserva--><path codeLine="119" d="M167.63,550.6706 C162.78,575.9906 157.29,604.6106 152.73,628.4006 " fill="none" id="Livro-Reserva" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="166.0587,594.727,170.6479,586.3969,164.8752,585.2904,166.0587,594.727" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="176" y="595.1357">reservado em</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="158.8942" y="572.2265">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="132.6937" y="617.8687">0..*</text><!--MD5=[80f416829ca7704f6b8e6c5e6dea841f]
+link Reserva to StatusReserva--><!--MD5=[4dd98fc1f0f78772278612ce08c7c145]
+link Reserva to Notificacao--><path codeLine="123" d="M143,731.9606 C143,754.8806 143,781.8306 143,804.5306 " fill="none" id="Reserva-to-Notificacao" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="143,809.6106,147,800.6106,143,804.6106,139,800.6106,143,809.6106" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="148,775.8164,150.9389,766.7713,145.0611,766.7713,148,775.8164" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="157" y="776.1357">gera</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="135.5297" y="753.4946">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="121.4063" y="798.7213">0..*</text><!--MD5=[2f4f823e4fef1479545ea129fbb26d92]
+link Notificacao to Usuario--><path codeLine="124" d="M154.45,899.8006 C159.51,915.5006 166.32,932.9306 175,947.6406 C180.17,956.4006 186.16,965.0806 192.56,973.4606 " fill="none" id="Notificacao-to-Usuario" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="195.73,977.5406,193.3548,967.9825,192.6573,973.5962,187.0436,972.8987,195.73,977.5406" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="182.2976,943.2572,180.7515,933.8732,175.5309,936.5742,182.2976,943.2572" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="189" y="944.1357">destinatário</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="134.6448" y="920.4958">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="181.1225" y="966.7496">1</text><!--MD5=[4f48b84c3d8ec272dfc7e9a87a41a842]
+link Bibliotecario to Acervo--><path codeLine="127" d="M515.01,168.7406 C465.65,201.1906 402.26,242.8506 355.35,273.6806 " fill="none" id="Bibliotecario-to-Acervo" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="351.15,276.4506,360.8676,274.8482,355.3278,273.7036,356.4724,268.1637,351.15,276.4506" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="468.8217,210.5627,477.9945,208.0506,474.7661,203.1387,468.8217,210.5627" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="482" y="213.1357">gerencia</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="482.777" y="190.6175">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="353.6983" y="265.8685">1</text><!--MD5=[37a4d04b8819de9d6bca3b9f22f5d13d]
+link Bibliotecario to Emprestimo--><path codeLine="128" d="M587.26,168.6706 C583.9,208.7606 580,266.2306 580,316.6406 C580,316.6406 580,316.6406 580,1051.1406 C580,1099.6806 569.45,1153.0306 558.56,1195.1506 " fill="none" id="Bibliotecario-to-Emprestimo" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="557.24,1200.2306,563.3786,1192.5288,558.4998,1195.3919,555.6366,1190.5132,557.24,1200.2306" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="584.8603,685.3145,588.0508,676.355,582.1753,676.1908,584.8603,685.3145" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="594" y="685.6357">registra devolução</text><!--MD5=[e0e6ce46b63c7d7a6d7aeabdafbbe073]
+link Bibliotecario to Multa--><path codeLine="129" d="M655.55,168.8206 C693.75,205.3106 735,258.2406 735,316.6406 C735,316.6406 735,316.6406 735,590.6406 C735,654.5306 720.61,669.2206 707,731.6406 C695.13,786.0906 678,797.9106 678,853.6406 C678,853.6406 678,853.6406 678,1274.1406 C678,1331.4806 650.71,1391.9906 627.81,1432.6806 " fill="none" id="Bibliotecario-to-Multa" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="625.33,1437.0506,633.2579,1431.2069,627.803,1432.705,626.3049,1427.2501,625.33,1437.0506" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="702.8903,775.8152,706.027,766.8368,700.1505,766.7078,702.8903,775.8152" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="43" x="712" y="776.1357">registra</text><!--MD5=[6e9bc1ceef78e86fed959ab7215afd80]
+link Bibliotecario to CalculadoraDeMulta--><path codeLine="132" d="M693.62,168.7006 C710.74,178.1406 728.11,188.3006 744,198.6406 C783.74,224.4906 825.91,258.3106 855.38,283.1106 " fill="none" id="Bibliotecario-to-CalculadoraDeMulta" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="859.28,286.3906,854.9754,277.5323,855.4566,283.1686,849.8202,283.6498,859.28,286.3906" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="778.0821,210.7036,772.3945,203.0812,769.0004,207.88,778.0821,210.7036" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="783" y="213.1357">solicita cálculo</text><!--MD5=[6c58303804ab23e3ccfa494dbc9152ff]
+@startuml classes
+title Diagrama de Classes (macro) - Biblioteca Universitária
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam packageStyle rectangle
+hide empty members
+
+package "Aplicação da Biblioteca" {
+
+  ' - - - - - - - - - - Usuários - - - - - - - - - -
+  abstract class Usuario {
+    - id : int
+    - nome : String
+    - email : String
+    + podeEmprestar() : boolean
+    + possuiMultaPendente() : boolean
+    + {abstract} prazoEmprestimoDias() : int
+    + {abstract} limiteEmprestimos() : int
+  }
+  class Aluno {
+    - matricula : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Professor {
+    - siape : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Bibliotecario {
+    - nome : String
+    - matriculaFuncional : String
+    + registrarDevolucao(emprestimo : Emprestimo) : void
+    + aplicarMulta(emprestimo : Emprestimo) : Multa
+  }
+
+  ' - - - - - - - - - - Acervo - - - - - - - - - -
+  class Acervo {
+    + buscarLivros(termo : String) : List<Livro>
+    + adicionarLivro(livro : Livro) : void
+    + removerLivro(livro : Livro) : void
+  }
+  class Categoria {
+    - id : int
+    - nome : String
+    - descricao : String
+  }
+  class Livro {
+    - titulo : String
+    - autor : String
+    - isbn : String
+    - edicao : String
+    + buscarExemplarDisponivel() : Exemplar
+    + possuiReservaAtiva() : boolean
+  }
+  class Exemplar {
+    - codigo : String
+    - disponivel : boolean
+    - localizacao : String
+    + marcarDisponivel() : void
+    + marcarIndisponivel() : void
+  }
+
+  ' - - - - - - - - - - Circulação - - - - - - - - - -
+  class Emprestimo {
+    - dataEmprestimo : Date
+    - dataPrevistaDevolucao : Date
+    - dataDevolucao : Date [0..1]
+    - qtdRenovacoes : int
+    + renovar() : boolean
+    + devolver() : void
+    + diasDeAtraso() : int
+  }
+  class Reserva {
+    - dataReserva : Date
+    - status : StatusReserva
+    + notificarDisponibilidade() : void
+    + cancelar() : void
+  }
+  enum StatusReserva <<enumeration>> {
+    ATIVA
+    ATENDIDA
+    CANCELADA
+  }
+  class Notificacao {
+    - mensagem : String
+    - dataEnvio : Date
+    + enviar() : void
+  }
+  class Multa {
+    - valor : double
+    - paga : boolean
+    + pagar() : void
+  }
+}
+
+package "Sistema de Multas" <<externo>> {
+  interface CalculadoraDeMulta <<interface>> {
+    + calcularValor(diasAtraso : int) : double
+  }
+}
+
+' ===================== Relações =====================
+' herança'
+Usuario <|- - Aluno
+Usuario <|- - Professor
+
+' acervo'
+Acervo "1" o- - "0..*" Livro
+Livro "0..*" - - "1..*" Categoria : classificado em >
+Livro "1" *- - "1..*" Exemplar
+
+' circulação'
+Usuario "1" - - "0..*" Emprestimo : realiza >
+Emprestimo "0..*" - -> "1" Exemplar : refere-se a >
+Emprestimo "1" - -> "0..1" Multa : gera >
+
+Reserva "0..*" - -> "1" Usuario : solicitante >
+Livro "1" - - "0..*" Reserva : reservado em >
+Reserva -[hidden]right- StatusReserva
+
+' notificações
+Reserva "1" - -> "0..*" Notificacao : gera >
+Notificacao "0..*" - -> "1" Usuario : destinatário >
+
+' bibliotecário
+Bibliotecario "1..*" - -> "1" Acervo : gerencia >
+Bibliotecario ..> Emprestimo : registra devolução >
+Bibliotecario ..> Multa : registra >
+
+' integração com o sistema externo
+Bibliotecario ..> CalculadoraDeMulta : solicita cálculo >
+
+@enduml
+
+@startuml classes
+title Diagrama de Classes (macro) - Biblioteca Universitária
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam packageStyle rectangle
+hide empty members
+
+package "Aplicação da Biblioteca" {
+
+  abstract class Usuario {
+    - id : int
+    - nome : String
+    - email : String
+    + podeEmprestar() : boolean
+    + possuiMultaPendente() : boolean
+    + {abstract} prazoEmprestimoDias() : int
+    + {abstract} limiteEmprestimos() : int
+  }
+  class Aluno {
+    - matricula : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Professor {
+    - siape : String
+    + prazoEmprestimoDias() : int
+    + limiteEmprestimos() : int
+  }
+  class Bibliotecario {
+    - nome : String
+    - matriculaFuncional : String
+    + registrarDevolucao(emprestimo : Emprestimo) : void
+    + aplicarMulta(emprestimo : Emprestimo) : Multa
+  }
+
+  class Acervo {
+    + buscarLivros(termo : String) : List<Livro>
+    + adicionarLivro(livro : Livro) : void
+    + removerLivro(livro : Livro) : void
+  }
+  class Categoria {
+    - id : int
+    - nome : String
+    - descricao : String
+  }
+  class Livro {
+    - titulo : String
+    - autor : String
+    - isbn : String
+    - edicao : String
+    + buscarExemplarDisponivel() : Exemplar
+    + possuiReservaAtiva() : boolean
+  }
+  class Exemplar {
+    - codigo : String
+    - disponivel : boolean
+    - localizacao : String
+    + marcarDisponivel() : void
+    + marcarIndisponivel() : void
+  }
+
+  class Emprestimo {
+    - dataEmprestimo : Date
+    - dataPrevistaDevolucao : Date
+    - dataDevolucao : Date [0..1]
+    - qtdRenovacoes : int
+    + renovar() : boolean
+    + devolver() : void
+    + diasDeAtraso() : int
+  }
+  class Reserva {
+    - dataReserva : Date
+    - status : StatusReserva
+    + notificarDisponibilidade() : void
+    + cancelar() : void
+  }
+  enum StatusReserva <<enumeration>> {
+    ATIVA
+    ATENDIDA
+    CANCELADA
+  }
+  class Notificacao {
+    - mensagem : String
+    - dataEnvio : Date
+    + enviar() : void
+  }
+  class Multa {
+    - valor : double
+    - paga : boolean
+    + pagar() : void
+  }
+}
+
+package "Sistema de Multas" <<externo>> {
+  interface CalculadoraDeMulta <<interface>> {
+    + calcularValor(diasAtraso : int) : double
+  }
+}
+
+Usuario <|- - Aluno
+Usuario <|- - Professor
+
+Acervo "1" o- - "0..*" Livro
+Livro "0..*" - - "1..*" Categoria : classificado em >
+Livro "1" *- - "1..*" Exemplar
+
+Usuario "1" - - "0..*" Emprestimo : realiza >
+Emprestimo "0..*" - -> "1" Exemplar : refere-se a >
+Emprestimo "1" - -> "0..1" Multa : gera >
+
+Reserva "0..*" - -> "1" Usuario : solicitante >
+Livro "1" - - "0..*" Reserva : reservado em >
+Reserva -[hidden]right- StatusReserva
+
+Reserva "1" - -> "0..*" Notificacao : gera >
+Notificacao "0..*" - -> "1" Usuario : destinatário >
+
+Bibliotecario "1..*" - -> "1" Acervo : gerencia >
+Bibliotecario ..> Emprestimo : registra devolução >
+Bibliotecario ..> Multa : registra >
+
+Bibliotecario ..> CalculadoraDeMulta : solicita cálculo >
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 07:25:05 BRT 2021)
+(MIT source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: BR
+--></g></svg>

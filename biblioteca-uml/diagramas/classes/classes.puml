@@ -3,9 +3,12 @@ title Diagrama de Classes (macro) – Biblioteca Universitária
 
 skinparam classAttributeIconSize 0
 skinparam shadowing false
+skinparam packageStyle rectangle
 hide empty members
 
 package "Aplicação da Biblioteca" {
+
+  ' ---------- Usuários ----------
   abstract class Usuario {
     - id : int
     - nome : String
@@ -31,85 +34,102 @@ package "Aplicação da Biblioteca" {
     + registrarDevolucao(emprestimo : Emprestimo) : void
     + aplicarMulta(emprestimo : Emprestimo) : Multa
   }
+
+  ' ---------- Acervo ----------
   class Acervo {
     + buscarLivros(termo : String) : List<Livro>
     + adicionarLivro(livro : Livro) : void
     + removerLivro(livro : Livro) : void
-  }
-  class Livro {
-    - titulo : String
-    - autor : String
-    - isbn : String
-    - edicao : String
   }
   class Categoria {
     - id : int
     - nome : String
     - descricao : String
   }
+  class Livro {
+    - titulo : String
+    - autor : String
+    - isbn : String
+    - edicao : String
+    + buscarExemplarDisponivel() : Exemplar
+    + possuiReservaAtiva() : boolean
+  }
   class Exemplar {
     - codigo : String
     - disponivel : boolean
     - localizacao : String
+    + marcarDisponivel() : void
+    + marcarIndisponivel() : void
   }
+
+  ' ---------- Circulação ----------
   class Emprestimo {
     - dataEmprestimo : Date
     - dataPrevistaDevolucao : Date
-    - dataDevolucao : Date
+    - dataDevolucao : Date [0..1]
+    - qtdRenovacoes : int
     + renovar() : boolean
     + devolver() : void
+    + diasDeAtraso() : int
   }
   class Reserva {
     - dataReserva : Date
+    - status : StatusReserva
+    + notificarDisponibilidade() : void
+    + cancelar() : void
+  }
+  enum StatusReserva <<enumeration>> {
+    ATIVA
+    ATENDIDA
+    CANCELADA
   }
   class Notificacao {
     - mensagem : String
     - dataEnvio : Date
-    + enviar(usuario : Usuario) : void
+    + enviar() : void
   }
-}
-
-package "Sistema de Multas (externo)" <<externo>> {
   class Multa {
     - valor : double
     - paga : boolean
-    + calcular() : double
-  }
-  class CalculadoraDeMulta {
-    - valorPorDia : double
-    + calcular(emprestimo : Emprestimo) : double
+    + pagar() : void
   }
 }
 
-'herança'
+package "Sistema de Multas" <<externo>> {
+  interface CalculadoraDeMulta <<interface>> {
+    + calcularValor(diasAtraso : int) : double
+  }
+}
+
+' ===================== Relações =====================
+' herança'
 Usuario <|-- Aluno
 Usuario <|-- Professor
 
-'associação simples entre usuario e emprestimo'
+' acervo'
+Acervo "1" o-- "0..*" Livro
+Livro "0..*" -- "1..*" Categoria : classificado em >
+Livro "1" *-- "1..*" Exemplar
+
+' circulação'
 Usuario "1" -- "0..*" Emprestimo : realiza >
+Emprestimo "0..*" --> "1" Exemplar : refere-se a >
+Emprestimo "1" --> "0..1" Multa : gera >
 
-'associação direcionada'
-Reserva "0..*" --> "1" Usuario
-Usuario "1" -- "0..*" Notificacao : recebe >
+Reserva "0..*" --> "1" Usuario : solicitante >
+Livro "1" -- "0..*" Reserva : reservado em >
+Reserva -[hidden]right- StatusReserva
+
+' notificações
 Reserva "1" --> "0..*" Notificacao : gera >
+Notificacao "0..*" --> "1" Usuario : destinatário >
 
-'associação direcionada'
+' bibliotecário
 Bibliotecario "1..*" --> "1" Acervo : gerencia >
+Bibliotecario ..> Emprestimo : registra devolução >
+Bibliotecario ..> Multa : registra >
 
-'dependências'
-Bibliotecario ..> Emprestimo : registra devolucao >
-Bibliotecario ..> Multa : solicita criação >
-
-'integração com sistema externo'
+' integração com o sistema externo
 Bibliotecario ..> CalculadoraDeMulta : solicita cálculo >
 
-'classe nova: acervo'
-Acervo "1" o-- "0..*" Livro
-Categoria "1" -- "0..*" Livro : classifica >
-
-'macro'
-Livro "1" *-- "1..*" Exemplar
-Exemplar "1" -- "0..*" Emprestimo
-Livro "1" -- "0..*" Reserva
-Emprestimo "1" -- "0..1" Multa
 @enduml

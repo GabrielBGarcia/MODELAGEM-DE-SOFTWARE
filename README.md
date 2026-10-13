@@ -10,8 +10,8 @@
 |------|-----------|--------|
 | Carlos Antônio Rodrigues Soares | [Matrícula] | [@usuario](https://github.com/usuario) |
 | Gabriel Borges Garcia | [Matrícula] | [@usuario](https://github.com/usuario) |
-| Heitor Gonçalves Costa | [Matrícula] | [@usuario](https://github.com/usuario) |
-| Luís Henrique Oliveira de Jesus | [Matrícula] | [@usuario](https://github.com/usuario) |
+| Heitor Gonçalves Costa | [202605510] | [@usuario](https://github.com/heitor-40) |
+| Luis Henrique Oliveira de Jesus | [202603247] | [@usuario](https://github.com/Luis-Henrique-ufg) |
 | Rafael Barbosa | [Matrícula] | [@usuario](https://github.com/usuario) |
 
 **Professor:** [Diogo Oliveira Santos](http://www.docente.ufg.br/diogogyn100)
