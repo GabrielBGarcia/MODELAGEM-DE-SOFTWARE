@@ -1,0 +1,33 @@
+@startuml sequencia-devolucao
+title Diagrama de Sequência - Devolução de Obra
+
+' mesmas cores das raias do diagrama de atividades
+actor "Usuário" as usu #E6F2FF
+actor "Bibliotecário" as bib #FFF4DC
+participant "Sistema" as sis #EAF7EA
+participant ":Emprestimo" as emp
+participant ":Exemplar" as ex
+participant ":Multa" as multa
+actor "Sistema de Multas" as sm #FBE6E6
+
+usu -> bib : entrega a obra
+bib -> sis ++ : verificar atraso
+sis -> emp : diasDeAtraso()
+emp --> sis : dias
+sis --> bib -- : dias de atraso
+
+' so tem multa se tiver atraso
+opt houve atraso
+  bib -> sm : calcularValor(dias)
+  sm --> bib : valor
+  bib -> sis : aplicar multa
+  sis -> multa ** : new Multa(valor)
+end
+
+bib -> sis ++ : registrar devolução
+sis -> emp : devolver()
+emp -> ex : marcarDisponivel()
+sis --> bib -- : devolução registrada
+bib --> usu : devolução concluída (informa multa, se houver)
+
+@enduml
