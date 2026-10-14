@@ -1,0 +1,52 @@
+@startuml sequencia
+title Diagrama de Sequência – Realizar Empréstimo
+
+skinparam shadowing false
+hide footbox
+autonumber
+
+' ---------- Participantes ----------
+actor "Aluno / Professor" as Ator
+participant "Sistema" as Sistema
+participant ":Livro" as Livro
+participant ":Usuario" as Usuario
+participant ":Exemplar" as Exemplar
+' :Emprestimo é criado durante o fluxo (create)
+
+' ---------- Consulta ----------
+Ator -> Sistema : consultarLivro(titulo)
+activate Sistema
+Sistema -> Livro : buscarExemplarDisponivel()
+activate Livro
+Livro --> Sistema : exemplar
+deactivate Livro
+
+alt exemplar disponível
+
+    Sistema --> Ator : livro disponível
+    Ator -> Sistema : solicitarEmprestimo(livro)
+
+    ' ---------- Verificação do usuário ----------
+    Sistema -> Usuario : podeEmprestar()
+    activate Usuario
+    Usuario --> Sistema : apto
+    deactivate Usuario
+
+    alt usuário apto
+        Sistema -> Usuario : prazoEmprestimoDias()
+        Usuario --> Sistema : dias
+        create participant ":Emprestimo" as Emprestimo
+        Sistema -> Emprestimo : <<create>>(exemplar, dias)
+        Sistema -> Exemplar : marcarIndisponivel()
+        Sistema --> Ator : empréstimo confirmado + data de devolução
+    else multa pendente ou limite atingido
+        Sistema --> Ator : empréstimo negado
+    end
+
+else nenhum exemplar disponível
+    Sistema --> Ator : livro indisponível (pode fazer reserva)
+end
+
+deactivate Sistema
+
+@enduml
