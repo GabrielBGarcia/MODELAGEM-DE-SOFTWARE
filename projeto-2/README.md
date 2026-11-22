@@ -9,13 +9,13 @@
 
 | Integrante | Matrícula | Responsabilidade | Pasta |
 |------------|-----------|------------------|-------|
-| Gabriel Borges Garcia | 202201691 | Requisitos, atores, casos de uso, componentes e interfaces (modelagem do sistema); revisão e montagem do PDF final | [`docs/`](docs/) e [`entrega/`](entrega/) |
-| [Integrante 2] | [Matrícula] | Desenhar o **Diagrama de Casos de Uso** | [`casos-de-uso/diagrama/`](casos-de-uso/diagrama/) |
-| [Integrante 3] | [Matrícula] | Escrever a **especificação textual** de cada caso de uso | [`casos-de-uso/especificacoes/`](casos-de-uso/especificacoes/) |
-| [Integrante 4] | [Matrícula] | Desenhar o **Diagrama de Componentes** | [`componentes/diagrama/`](componentes/diagrama/) |
-| [Integrante 5] | [Matrícula] | Escrever o **dicionário de componentes** e a **tabela de símbolos** | [`componentes/dicionario/`](componentes/dicionario/) |
+| Gabriel Borges Garcia | 202201691 | Requisitos, atores, casos de uso, componentes e interfaces (modelagem do sistema); revisão e montagem do PDF final | [`modelagem-do-sistema.md`](modelagem-do-sistema.md) e [`entrega/`](entrega/) |
+| [Integrante 2] | [Matrícula] | Desenhar o **Diagrama de Casos de Uso** | [`casos-de-uso/`](casos-de-uso/) |
+| [Integrante 3] | [Matrícula] | Escrever a **especificação textual** de cada caso de uso | [`casos-de-uso/`](casos-de-uso/) |
+| [Integrante 4] | [Matrícula] | Desenhar o **Diagrama de Componentes** | [`componentes/`](componentes/) |
+| [Integrante 5] | [Matrícula] | Escrever o **dicionário de componentes** e a **tabela de símbolos** | [`componentes/`](componentes/) |
 
-> ⚠️ **Antes de começar, leiam [`docs/modelagem-do-sistema.md`](docs/modelagem-do-sistema.md).** Todos os nomes (atores, casos de uso, componentes, interfaces) já estão definidos lá. Não inventem nomes novos: se precisar mudar algo, falem com o Gabriel para atualizar o documento primeiro.
+> ⚠️ **Antes de começar, leiam [`modelagem-do-sistema.md`](modelagem-do-sistema.md).** Todos os nomes (atores, casos de uso, componentes, interfaces) já estão definidos lá. Não inventem nomes novos: se precisar mudar algo, falem com o Gabriel para atualizar o documento primeiro.
 
 ---
 
@@ -30,17 +30,14 @@ Os dois diagramas devem usar **a mesma ferramenta**, porque a tabela de símbolo
 
 ```
 projeto-2/
-├── README.md
-├── docs/
-│   └── modelagem-do-sistema.md      ← fonte única (Gabriel)
-├── casos-de-uso/
-│   ├── diagrama/                    ← arquivo-fonte + imagem (Integrante 2)
-│   └── especificacoes/              ← especificações UC01–UC14 (Integrante 3)
-├── componentes/
-│   ├── diagrama/                    ← arquivo-fonte + imagem (Integrante 4)
-│   └── dicionario/                  ← dicionário + tabela de símbolos (Integrante 5)
-└── entrega/                         ← PDF final e .zip (Gabriel)
+├── README.md                  ← este arquivo
+├── modelagem-do-sistema.md    ← LEIA PRIMEIRO (Gabriel)
+├── casos-de-uso/              ← Integrantes 2 e 3
+├── componentes/               ← Integrantes 4 e 5
+└── entrega/                   ← PDF e .zip (Gabriel)
 ```
+
+Cada pasta tem um `README.md` explicando o que colocar nela.
 
 ---
 
