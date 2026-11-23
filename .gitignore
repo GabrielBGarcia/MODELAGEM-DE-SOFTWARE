@@ -4,4 +4,6 @@ Thumbs.db
 *.tmp
 build_pdf.py
 build_ufg_pdf.py
-__pycache__
+__pycache__/
+*.py[cod]
+
