@@ -1,0 +1,69 @@
+@startuml
+
+left to right direction
+
+skinparam Shadowing false
+skinparam linetype polyline
+skinparam nodesep 45
+skinparam ranksep 70
+skinparam packageStyle rectangle
+skinparam ArrowColor #334155
+skinparam ArrowThickness 1.5
+skinparam RoundCorner 20
+skinparam defaultFontName Dialog
+skinparam defaultFontSize 14
+skinparam backgroundColor #EBE6D2
+
+skinparam rectangle {
+     BackgroundColor #DECCA6
+}
+
+skinparam usecase {
+    BackgroundColor #EBE6D2
+    BorderColor #000000
+}
+
+skinparam actor {
+    BackgroundColor #ffffffff
+    BorderColor #050505ff
+}
+
+actor "Cliente" as Cliente
+actor "Sistema de Inventário\ndo Parceiro" as Inventario
+actor "Gateway de Pagamento" as Pagamento
+actor "Serviço de E-mail" as Email
+
+rectangle "Plataforma de Reservas de Viagens e Hotéis - Reservas e Pagamento" {
+usecase "Verificar Disponibilidade" as UC03
+usecase "Autenticar Usuário" as UC06
+usecase "Realizar Reserva" as UC07
+usecase "Processar Pagamento" as UC08
+usecase "Aplicar Cupom de Desconto" as UC09
+usecase "Emitir Voucher" as UC10 
+usecase "Consultar Reservas" as UC11
+usecase "Cancelar Reserva" as UC12
+}
+
+Cliente -- UC07
+Cliente -- UC09
+Cliente -- UC11
+Cliente -- UC12
+
+UC03 -- Inventario
+UC08 -- Pagamento
+UC12 -- Pagamento
+UC10 -- Email
+
+UC07 ..> UC06 : <<include>>
+UC07 ..> UC03 : <<include>>
+UC07 ..> UC08 : <<include>>
+UC07 ..> UC10 : <<include>>
+UC11 ..> UC06 : <<include>>
+
+UC07 <.. UC09 : <<extend>>
+UC11 <.. UC12 : <<extend>>
+
+'paleta: #000000 #EBE6D2 #DBD3C6 #DECCA6 #D0C0A7
+
+@enduml
+

@@ -1,0 +1,54 @@
+@startuml
+
+left to right direction
+
+skinparam Shadowing false
+skinparam linetype polyline
+skinparam nodesep 45
+skinparam ranksep 70
+skinparam packageStyle rectangle
+skinparam ArrowColor #334155
+skinparam ArrowThickness 1.5
+skinparam RoundCorner 20
+skinparam defaultFontName Dialog
+skinparam defaultFontSize 14
+skinparam backgroundColor #EBE6D2
+
+skinparam rectangle {
+     BackgroundColor #DECCA6
+}
+
+skinparam usecase {
+    BackgroundColor #EBE6D2
+    BorderColor #000000
+}
+
+skinparam actor {
+    BackgroundColor #ffffffff
+    BorderColor #050505ff
+}
+
+'Apelidos aqui
+actor "Parceiro" as Parceiro
+actor "Hotel Parceiro" as Hotel
+actor "Companhia\nAérea Parceira" as Companhia
+
+Hotel --|> Parceiro
+Companhia --|> Parceiro
+
+rectangle "Plataforma de Reservas de Viagens e Hotéis - Portal do Parceiro" {
+usecase "Gerenciar Ofertas" as UC13
+usecase "Gerenciar Tarifas" as UC14
+usecase "Autenticar Usuário" as UC06
+}
+
+Parceiro -- UC13
+Parceiro -- UC14
+
+UC13 ..> UC06 : <<include>>
+UC14 ..> UC06 : <<include>>
+
+'paleta: #000000 #EBE6D2 #DBD3C6 #DECCA6 #D0C0A7
+
+@enduml
+
