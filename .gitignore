@@ -2,3 +2,8 @@
 Thumbs.db
 .vscode/
 *.tmp
+build_pdf.py
+build_ufg_pdf.py
+__pycache__/
+*.py[cod]
+

@@ -1,0 +1,60 @@
+@startuml
+
+left to right direction
+
+skinparam Shadowing false
+skinparam linetype polyline
+skinparam nodesep 45
+skinparam ranksep 70
+skinparam packageStyle rectangle
+skinparam ArrowColor #334155
+skinparam ArrowThickness 1.5
+skinparam RoundCorner 20
+skinparam defaultFontName Dialog
+skinparam defaultFontSize 14
+skinparam backgroundColor #EBE6D2
+
+skinparam rectangle {
+     BackgroundColor #DECCA6
+}
+
+skinparam usecase {
+    BackgroundColor #EBE6D2
+    BorderColor #000000
+}
+
+skinparam actor {
+    BackgroundColor #ffffffff
+    BorderColor #050505ff
+}
+
+actor "Visitante" as Visitante
+actor "Cliente" as Cliente
+actor "Sistema de Inventário\ndo Parceiro" as Inventario
+
+
+Cliente --|> Visitante
+
+rectangle "Plataforma de Reservas de Viagens e Hotéis - Busca e Cadastro" {
+usecase "Buscar Passagens Aéreas" as UC01
+usecase "Buscar Quartos de Hotel" as UC02
+usecase "Verificar Disponibilidade" as UC03
+usecase "Filtrar Resultados" as UC04
+usecase "Cadastrar Cliente" as UC05
+}
+
+Visitante -- UC01
+Visitante -- UC02
+Visitante -- UC05
+UC03 -- Inventario
+Visitante -- UC04
+
+UC01 ..> UC03 : <<include>>
+UC02 ..> UC03 : <<include>>
+UC04 ..> UC01 : <<extend>>
+UC04 ..> UC02 : <<extend>>
+
+'paleta: #000000 #EBE6D2 #DBD3C6 #DECCA6 #D0C0A7
+
+@enduml
+

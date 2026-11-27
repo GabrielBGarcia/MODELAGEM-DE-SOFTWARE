@@ -10,7 +10,7 @@
 | Integrante | Matrícula | Responsabilidade | Pasta |
 |------------|-----------|------------------|-------|
 | Gabriel Borges Garcia | 202201691 | Requisitos, atores, casos de uso, componentes e interfaces (modelagem do sistema); revisão e montagem do PDF final | [`modelagem-do-sistema.md`](modelagem-do-sistema.md) e [`entrega/`](entrega/) |
-| [Integrante 2] | [Matrícula] | Desenhar o **Diagrama de Casos de Uso** | [`casos-de-uso/`](casos-de-uso/) |
+| Luis Henrique | 202603247 | Desenhar o **Diagrama de Casos de Uso** | [`casos-de-uso/`](casos-de-uso/) |
 | [Integrante 3] | [Matrícula] | Escrever a **especificação textual** de cada caso de uso | [`casos-de-uso/`](casos-de-uso/) |
 | [Integrante 4] | [Matrícula] | Desenhar o **Diagrama de Componentes** | [`componentes/`](componentes/) |
 | [Integrante 5] | [Matrícula] | Escrever o **dicionário de componentes** e a **tabela de símbolos** | [`componentes/`](componentes/) |
